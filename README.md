@@ -3,23 +3,27 @@
 HapFilterR is an R package for analyzing Hapmap data. It provides tools for calculating Minor Allele Frequency (MAF), analyzing missing data, filtering SNPs, and summarizing Hapmap datasets.
 
 ## Installation
-To install HapFilterR, use the following command:
+
+To install HapFilterR, use the following commands:
 
 ```r
-# Install from GitHub (assuming the package is hosted on GitHub)
+# Install devtools if not already installed
+install.packages("devtools")
+
+# Install HapFilterR from GitHub
 devtools::install_github("Khaled-H-Mousa/HapFilterR")
 ```
 
 ## Features
 
 1. **Calculate Minor Allele Frequency (MAF):**
-   - Computes the frequency of the less common allele for each SNP.
+   - Computes the frequency of the less common allele for each SNP to identify genetic variants of interest.
 
 2. **Analyze Missing Data:**
-   - Calculates the percentage of missing genotypes for each SNP.
+   - Calculates the percentage of missing genotypes for each SNP to assess data quality.
 
 3. **Filter SNPs:**
-   - Filters SNPs based on MAF and missing data thresholds.
+   - Filters SNPs based on MAF and missing data thresholds, ensuring high-quality data for downstream analysis.
 
 ## Key Functions
 
@@ -37,10 +41,9 @@ MAF = \min\left(\frac{n_A}{n_A + n_B}, \frac{n_B}{n_A + n_B}\right)
 \]
 
 Where:
-- \( n_A \): Count of allele \( A \) across all individuals.
-- \( n_B \): Count of allele \( B \) across all individuals.
+- \( n_A \): Count of allele \( A \) across all samples for a given SNP.
+- \( n_B \): Count of allele \( B \) across all samples.
 - The minor allele is the allele with the smaller frequency in the population.
-
 
 ### `analyze_missing_data`
 - **Description**: Analyzes the percentage of missing data for each SNP.
@@ -61,9 +64,9 @@ Where:
   - Missing data threshold (default = 10%).
 - **Output**: Filtered data frame.
 
-### Usage
+## Usage
 
-#### Example Workflow
+### Example Workflow
 
 ```r
 # Load the HapFilterR package
@@ -88,7 +91,6 @@ summary_stats <- summarize_hapmap(filtered_data)
 write.csv(filtered_data, file = "OUT/New_filtered_data.csv", row.names = FALSE)
 ```
 
-## License
-
-This package is released under the MIT License.
-
+### Notes:
+- The `read_hapmap` function is used to load data in Hapmap format. Ensure your input file is formatted correctly.
+- Adjust `maf_threshold` and `missing_threshold` based on your research needs.
