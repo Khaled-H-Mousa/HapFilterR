@@ -51,9 +51,13 @@ Where:
 
 - **Mathematical Formula**:
   The percentage of missing data for each SNP is calculated as:
-  $$
-  \text{Missing Percentage} = \left( \frac{\text{Number of Missing Genotypes}}{\text{Total Number of Genotypes}} \right) \times 100
-  $$
+
+  ![Missing Data Formula](https://github.com/Khaled-H-Mousa/HapFilterR/blob/main/Missing_Data.png)
+
+Where:
+- `Number of Missing Genotypes`: The count of missing data points for a SNP.
+- `Total Number of Genotypes`: The total data points for that SNP.
+
 
 ### `filter_snps`
 - **Description**: Filters SNPs based on MAF and missing data thresholds.
