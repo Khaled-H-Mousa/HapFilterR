@@ -36,7 +36,7 @@ devtools::install_github("Khaled-H-Mousa/HapFilterR")
 
 The Minor Allele Frequency (MAF) is defined as:
 
-MAF = min(n_A / (n_A + n_B), n_B / (n_A + n_B))
+![MAF Formula](https://github.com/Khaled-H-Mousa/HapFilterR/blob/main/MAF.png)
 
 Where:
 - n_A: Count of allele A across all individuals.
