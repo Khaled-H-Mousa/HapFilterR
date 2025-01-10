@@ -1,9 +1,8 @@
 # HapFilterR
 
 HapFilterR is an R package for analyzing Hapmap data. It provides tools for calculating Minor Allele Frequency (MAF), analyzing missing data, filtering SNPs, and summarizing Hapmap datasets.
-https://github.com/Khaled-H-Mousa
+
 ## Installation
-https://github.com/Khaled-H-Mousa
 To install HapFilterR, use the following command:
 
 ```r
