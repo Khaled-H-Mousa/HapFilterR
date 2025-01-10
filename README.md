@@ -35,10 +35,9 @@ devtools::install_github("Khaled-H-Mousa/HapFilterR")
 - **Mathematical Formula**:
 
 The Minor Allele Frequency (MAF) is defined as:
-
-\[
+$$
 MAF = \min\left(\frac{n_A}{n_A + n_B}, \frac{n_B}{n_A + n_B}\right)
-\]
+$$
 
 Where:
 - \( n_A \): Count of allele \( A \) across all samples for a given SNP.
@@ -52,9 +51,9 @@ Where:
 
 - **Mathematical Formula**:
   The percentage of missing data for each SNP is calculated as:
-  \[
+  $$
   \text{Missing Percentage} = \left( \frac{\text{Number of Missing Genotypes}}{\text{Total Number of Genotypes}} \right) \times 100
-  \]
+  $$
 
 ### `filter_snps`
 - **Description**: Filters SNPs based on MAF and missing data thresholds.
