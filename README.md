@@ -35,14 +35,14 @@ devtools::install_github("Khaled-H-Mousa/HapFilterR")
 - **Mathematical Formula**:
 
 The Minor Allele Frequency (MAF) is defined as:
-$$
-MAF = \min\left(\frac{n_A}{n_A + n_B}, \frac{n_B}{n_A + n_B}\right)
-$$
+
+MAF = min(n_A / (n_A + n_B), n_B / (n_A + n_B))
 
 Where:
-- \( n_A \): Count of allele \( A \) across all samples for a given SNP.
-- \( n_B \): Count of allele \( B \) across all samples.
+- n_A: Count of allele A across all individuals.
+- n_B: Count of allele B across all individuals.
 - The minor allele is the allele with the smaller frequency in the population.
+
 
 ### `analyze_missing_data`
 - **Description**: Analyzes the percentage of missing data for each SNP.
